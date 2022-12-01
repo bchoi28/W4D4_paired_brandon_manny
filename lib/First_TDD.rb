@@ -1,10 +1,13 @@
 class Array
     def my_uniq
-        hash = Hash.new
-            self.each do |ele|
-                hash[ele] = true
-            end
-        hash.keys
+        # hash = Hash.new
+        #     self.each do |ele|
+        #         hash[ele] = true
+        #     end
+        # hash.keys
+
+        self.uniq
+
     end
 
     def two_sum
@@ -23,9 +26,15 @@ end
 
 
 def my_transpose(arrays)
-    transposed = []
     
-    (0...arrays.length-1)
+    (0...arrays.length).map do |i|
+        arrays.map do |array|
+            array[i]
+        end
+    end
 
-    transposed
 end
+
+# def stock_picker()
+
+# end
